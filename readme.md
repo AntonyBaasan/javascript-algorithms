@@ -2,7 +2,7 @@
 
 Implementation of computer sciense algorithms in Javascript programming language.
 
-Pivotal Tracker project: [www.pivotaltracker.com/projects/1926763](hwww.pivotaltracker.com/projects/1926763]
+Pivotal Tracker project: [www.pivotaltracker.com/projects/1926763](hwww.pivotaltracker.com/projects/1926763)
 
 | **Name** | **Status** |
 |----------|-------|
