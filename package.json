@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha 'test/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/AntonyBaasan/javascript-algorithms/issues"
   },
-  "homepage": "https://github.com/AntonyBaasan/javascript-algorithms#readme"
+  "homepage": "https://github.com/AntonyBaasan/javascript-algorithms#readme",
+  "dependencies": {
+    "mocha": "^3.2.0"
+  }
 }
