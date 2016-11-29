@@ -2,47 +2,61 @@ var expect = require("expect.js");
 var sort = require("../../../src/algorithms/sort/index");
 
 describe('Sort::', function () {
-    describe('Insertion Sort', function () {
-        var arr1;
-        var arr1Clone;
-        var previousLength;
 
-        before(function () {
-            // runs before all tests in this block
-        });
+    // make target testing methods
+    var runs = [{
+        it: 'Insertion Sort',
+        options: {
+            sort_method: sort.InsertionSort
+        }
 
-        after(function () {
-            // runs after all tests in this block
-        });
+    }, {
+        it: 'Selection Sort',
+        options: {
+            sort_method: sort.InsertionSort
+        }
+    }, ];
 
-        // runs before each test in this block
-        beforeEach(function () {
-            arr1 = [5, 4, 5, 7, 1, 3, 9, 10];
-            arr1Clone = arr1.slice(0);
-            previousLength = arr1.length;
-        });
+    runs.forEach(function (run) {
+        describe(run.it, function () {
+            var arr1;
+            var arr1Clone;
+            var previousLength;
 
-        afterEach(function () {
-            // runs after each test in this block
-        });
+            before(function () {
+                // runs before all tests in this block
+            });
 
-        it('should sort an array', function () {
+            after(function () {
+                // runs after all tests in this block
+            });
 
-            var sorted = sort.InsertionSort(arr1);
+            // runs before each test in this block
+            beforeEach(function () {
+                arr1 = [5, 4, 5, 7, 1, 3, 9, 10];
+                arr1Clone = arr1.slice(0);
+                previousLength = arr1.length;
+            });
 
-            expect(sorted).to.be.an('array');
-            expect(sorted).to.have.length(previousLength);
-            expect(sorted).to.be.eql([1, 3, 4, 5, 5, 7, 9, 10]);
-        });
-        it('should not change original array', function () {
-            var arr1 = [5, 4, 5, 7, 1, 3, 9, 10];
-            var arr1Clone = arr1.slice(0);
-            var previousLength = arr1.length;
+            afterEach(function () {
+                // runs after each test in this block
+            });
 
-            var sorted = sort.InsertionSort(arr1);
+            it('should sort an array', function () {
 
-            // make sure original array wasn't changed
-            expect(arr1).to.be.eql(arr1Clone);
+                var sorted = run.options.sort_method(arr1);
+
+                expect(sorted).to.be.an('array');
+                expect(sorted).to.have.length(previousLength);
+                expect(sorted).to.be.eql([1, 3, 4, 5, 5, 7, 9, 10]);
+            });
+            it('should not change original array', function () {
+                var sorted = run.options.sort_method(arr1);
+
+                // make sure original array wasn't changed
+                expect(arr1).to.be.eql(arr1Clone);
+            });
         });
     });
+
 });
