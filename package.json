@@ -28,5 +28,11 @@
   "dependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
   }
 }
