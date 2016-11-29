@@ -1,4 +1,4 @@
-function User() {};
+function User() {}
 User.prototype.save = function(errorCallback) {
     // errorCallback("Test error");
     errorCallback(undefined);
