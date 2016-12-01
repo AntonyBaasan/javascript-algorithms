@@ -7,8 +7,7 @@ module.exports = {
     "extends": "eslint:recommended",
     "rules": {
         "indent": [
-            "error",
-            4
+            "error"
         ],
         "linebreak-style": [
             "error",
