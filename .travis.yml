@@ -14,7 +14,7 @@ before_install:
 install:
   - npm install
   - npm install -g mocha
-  - npm install -g instanbul
+  - npm install -g istanbul
   - npm install -g codeclimate-test-reporter
 
 script:
