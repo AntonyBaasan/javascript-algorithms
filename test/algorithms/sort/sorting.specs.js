@@ -1,19 +1,19 @@
 var expect = require("expect.js");
 var sort = require("../../../src/algorithms/sort/index");
 
-describe('Sort::', function () {
+describe("Sort::", function () {
 
     // make target testing methods
     var runs = [{
-        it: 'Insertion Sort',
+        it: "Insertion Sort",
         options: {
             sort_method: sort.InsertionSort
         }
 
     }, {
-        it: 'Selection Sort',
+        it: "Selection Sort",
         options: {
-            sort_method: sort.InsertionSort
+            sort_method: sort.SelectionSort
         }
     }, ];
 
@@ -42,19 +42,36 @@ describe('Sort::', function () {
                 // runs after each test in this block
             });
 
-            it('should sort an array', function () {
+            it("should sort an array", function () {
 
                 var sorted = run.options.sort_method(arr1);
 
-                expect(sorted).to.be.an('array');
+                expect(sorted).to.be.an("array");
                 expect(sorted).to.have.length(previousLength);
                 expect(sorted).to.be.eql([1, 3, 4, 5, 5, 7, 9, 10]);
             });
-            it('should not change original array', function () {
-                var sorted = run.options.sort_method(arr1);
+
+            it("should not change original array", function () {
+                run.options.sort_method(arr1);
 
                 // make sure original array wasn't changed
                 expect(arr1).to.be.eql(arr1Clone);
+            });
+
+            it("should not throw an error when empty array", function () {
+                arr1 = [];
+                var sorted = run.options.sort_method(arr1);
+
+                // make sure original array wasn't changed
+                expect(sorted).to.be.eql([]);
+            });
+
+            it("should not throw an error when single elemnt array", function () {
+                arr1 = [];
+                var sorted = run.options.sort_method(arr1);
+
+                // make sure original array wasn't changed
+                expect(sorted).to.be.eql([]);
             });
         });
     });
