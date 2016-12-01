@@ -8,7 +8,10 @@
   },
   "scripts": {
     "test": "mocha 'test/**/*.js'",
-    "eslint": "eslint **/*.js"
+    "test:watch": "npm run test -- --watch",
+    "eslint": "eslint **/*.js",
+    "coverage": "istanbul cover _mocha test/**/sorting.spec.js",
+    "codeclimate": "./codeclimate_report_sender.sh"
   },
   "repository": {
     "type": "git",
