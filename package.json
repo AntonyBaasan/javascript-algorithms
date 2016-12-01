@@ -10,7 +10,7 @@
     "test": "mocha 'test/**/*.js'",
     "test:watch": "npm run test -- --watch",
     "eslint": "eslint **/*.js",
-    "coverage": "istanbul cover _mocha test/**/sorting.spec.js",
+    "coverage": " istanbul cover _mocha -- --recursive test/",
     "codeclimate": "./codeclimate_report_sender.sh"
   },
   "repository": {
