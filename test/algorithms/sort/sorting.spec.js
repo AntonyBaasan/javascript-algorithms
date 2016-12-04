@@ -15,7 +15,12 @@ describe("Sort::", function () {
         options: {
             sort_method: sort.SelectionSort
         }
-    }, ];
+    }, {
+        it: "Quick Sort",
+        options: {
+            sort_method: sort.QuickSort
+        }
+    } ];
 
     runs.forEach(function (run) {
         describe(run.it, function () {

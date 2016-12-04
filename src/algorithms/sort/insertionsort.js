@@ -5,7 +5,6 @@ function InsertionSort(inputArray) {
     //clone array
     var a = inputArray.slice(0);
 
-    var x;
     for (var i = 1; i < a.length; i++) {
         var j = i;
         var temp;
@@ -18,6 +17,6 @@ function InsertionSort(inputArray) {
     }
 
     return a;
-};
+}
 
 exports.InsertionSort = InsertionSort;
