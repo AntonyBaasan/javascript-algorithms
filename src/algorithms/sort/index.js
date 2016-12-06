@@ -6,3 +6,6 @@ exports.SelectionSort = SelectionSort.SelectionSort;
 
 var QuickSort = require("./quicksort");
 exports.QuickSort = QuickSort.QuickSort;
+
+var MergeSort = require("./mergesort");
+exports.MergeSort = MergeSort.MergeSort;

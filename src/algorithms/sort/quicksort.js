@@ -44,6 +44,6 @@ function Partition(inputArray, lo, hi) {
     return i;
 }
 
-var res = QuickSort([5, 4, 5, 7, 1, 3, 9, 10]);
+// var res = QuickSort([5, 4, 5, 7, 1, 3, 9, 10]);
 
 exports.QuickSort = QuickSort;

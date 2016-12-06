@@ -11,6 +11,11 @@ describe("Sort::", function () {
         }
 
     }, {
+        it: "Merge Sort",
+        options: {
+            sort_method: sort.MergeSort
+        }
+    }, {
         it: "Selection Sort",
         options: {
             sort_method: sort.SelectionSort
@@ -20,7 +25,7 @@ describe("Sort::", function () {
         options: {
             sort_method: sort.QuickSort
         }
-    } ];
+    }];
 
     runs.forEach(function (run) {
         describe(run.it, function () {
