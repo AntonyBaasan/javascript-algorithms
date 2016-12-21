@@ -43,6 +43,6 @@ function mergeArray(a, start, middle, end, b) {
 }
 
 // var res = MergeSort([5, 4, 5, 7, 1, 3, 9, 10]);
-var res = MergeSort([5, 4, 7, 1]);
+// var res = MergeSort([5, 4, 7, 1]);
 
 exports.MergeSort = MergeSort;

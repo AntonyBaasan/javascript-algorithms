@@ -9,3 +9,6 @@ exports.QuickSort = QuickSort.QuickSort;
 
 var MergeSort = require("./mergesort");
 exports.MergeSort = MergeSort.MergeSort;
+
+var HeapSort = require("./heapsort");
+exports.HeapSort = HeapSort.HeapSort;

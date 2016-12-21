@@ -21,6 +21,11 @@ describe("Sort::", function () {
             sort_method: sort.SelectionSort
         }
     }, {
+        it: "Heap Sort",
+        options: {
+            sort_method: sort.HeapSort
+        }
+    }, {
         it: "Quick Sort",
         options: {
             sort_method: sort.QuickSort
