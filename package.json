@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha 'test/**/*.js'",
+    "test": "mocha 'test/**/*.spec.js'",
     "test:watch": "npm run test -- --watch",
     "eslint": "eslint **/*.js",
     "coverage": " istanbul cover _mocha -- --recursive test/",
