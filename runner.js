@@ -1,11 +1,4 @@
-var various = require("./src/algorithms/various/tower_of_hanoi");
+// var test = "./debug/hot_runner.js";
+var test = require("./debug/dijkstra_runner.js");
 
-var fromStack = [1, 2, 3, 4];
-var toStack = [];
-var tempStack = [];
-
-various.TowerOfHanoi(fromStack, toStack, tempStack);
-
-console.log(fromStack);
-console.log(toStack);
-console.log(tempStack);
+test.run();

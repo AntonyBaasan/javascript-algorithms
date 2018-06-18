@@ -20,6 +20,8 @@ describe("Various::", function() {
         });
 
         it("should find shortest", function() {
+            var func = various.Dijkstra;
+            expect(func()).to.be.eql(false);
         });
 
     });
