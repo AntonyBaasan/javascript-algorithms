@@ -8,26 +8,23 @@ function Graph() {
         this.nodes.push(node);
     };
 
-    this.addSide = function(side) {
-        this.sides.push(side);
+    this.addSide = function(node1, node2, dist) {
+        this.sides.push(new Side(node1, node2, dist));
     };
 }
 
 function Node(name) {
     this.name = name;
-    this.shortestPath = []; //nodes
     this.distance = Number.MAX_SAFE_INTEGER;
-    this.adjacentNodes = []; //nodes
+    this.adjacentNode = null; //node
 
     this.addDestination = function(destiantionNode, distance) {
-        this.adjacentNodes.push({
-            distination: destiantionNode,
-            distance: distance
-        });
+        this.adjacentNode = destiantionNode;
+        this.distance = distance;
     };
 }
 
-function Side(node1, node2, dist){
+function Side(node1, node2, dist) {
     this.node1 = node1;
     this.node2 = node2;
     this.distance = dist;
