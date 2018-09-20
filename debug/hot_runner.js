@@ -7,9 +7,9 @@ function run() {
 
     various.TowerOfHanoi(fromStack, toStack, tempStack);
 
-    console.log(fromStack);
-    console.log(toStack);
-    console.log(tempStack);
+    // console.log(fromStack);
+    // console.log(toStack);
+    // console.log(tempStack);
 }
 
 exports.run = run;
